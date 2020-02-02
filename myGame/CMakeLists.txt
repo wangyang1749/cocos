@@ -54,17 +54,22 @@ set(GAME_RES_FOLDER
 if(APPLE OR WINDOWS)
     cocos_mark_multi_resources(common_res_files RES_TO "Resources" FOLDERS ${GAME_RES_FOLDER})
 endif()
-
+# ***** 添加新增文件
 # add cross-platforms source files and header files 
 list(APPEND GAME_SOURCE
-     Classes/AppDelegate.cpp
-     Classes/HelloWorldScene.cpp
-     Classes/Second.cpp
+        Classes/AppDelegate.cpp
+        Classes/HelloWorldScene.cpp
+        Classes/lesson1/ButtonScene.cpp
+        Classes/lesson2/helloevent.cpp
+        Classes/lesson3/HelloMove.cpp
      )
 list(APPEND GAME_HEADER
-     Classes/AppDelegate.h
-     Classes/HelloWorldScene.h
-     Classes/Second.h
+        Classes/AppDelegate.h
+        Classes/HelloWorldScene.h
+        Classes/lesson1/ButtonScene.h
+        Classes/lesson2/helloevent.h
+        Classes/lesson3/HelloMove.h
+
      )
 
 if(ANDROID)

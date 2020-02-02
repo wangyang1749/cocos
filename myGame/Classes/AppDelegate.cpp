@@ -24,7 +24,11 @@
 
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
-#include "Second.h"
+#include "lesson1/ButtonScene.h"
+#include "lesson2/helloevent.h"
+#include "lesson3/HelloMove.h"
+
+
 #define USE_AUDIO_ENGINE 1
 
 #if USE_AUDIO_ENGINE
@@ -116,11 +120,12 @@ bool AppDelegate::applicationDidFinishLaunching()
     // create a scene. it's an autorelease object
     // 创建游戏的场景
     auto scene = HelloWorld::createScene();
+    auto buttonScene = ButtonScene::createScene();
+    auto helloEvent =HelloEvent::createScene();
+    auto helloMove = HelloMove::createScene();
 
-    // auto scene = Second::createScene();
-    // run
     // 使场景显示
-    director->runWithScene(scene);
+    director->runWithScene(helloMove);
 
     return true;
 }
